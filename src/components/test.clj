@@ -1,11 +1,19 @@
-(enable-console-print!)
 
-(def greetings(fn [name] (str "Hello" name)))
 
-(defn greetings [name](str "Hello" name))
+(def greetings (fn [name] (str "Hello" name)))
 
-(greetings "Dave")
+(defn greetings2 [name] (str "Hello" name))
 
-(->> (range 5)
-(map inc ,,,)
-(filter odd? ,,,))
+
+(defn greet  [name]  (str "Hello, " name))
+(->> (greet "students"))
+
+(->> (range 7)
+     (map inc)
+     (filter odd?))
+
+
+(let [x 1
+      y 2
+      z (+ x y)]
+  (println z))
